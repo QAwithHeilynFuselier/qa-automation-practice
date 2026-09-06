@@ -31,8 +31,9 @@ public class RegistrationFlowTest {
     @BeforeClass
     public void setUp() {
         playwright = Playwright.create();
-        // headless=false para que puedas ver el navegador abrirse y llenar el form
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        headless=true;
+        boolean isCI = System.getenv("BUILD_NUMBER") != null;
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(isCI));
         page = browser.newPage();
     }
 
