@@ -12,7 +12,7 @@ import java.sql.SQLException;
  */
 public class DbHelper {
 
-    private static final String DB_URL = "jdbc:sqlite:registration.db";
+    private static final String DB_URL = "jdbc:sqlite:E:/Interview fiserv/Practice Project/registration.db";
 
     public record UsuarioRegistrado(long id, String nombre, String email) {}
 

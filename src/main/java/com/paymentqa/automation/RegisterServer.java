@@ -18,7 +18,7 @@ import java.sql.*;
  */
 public class RegisterServer {
 
-    private static final String DB_URL = "jdbc:sqlite:registration.db";
+    private static final String DB_URL = "jdbc:sqlite:E:/Interview fiserv/Practice Project/registration.db";
 
     public static void main(String[] args) throws IOException {
         initDb();
