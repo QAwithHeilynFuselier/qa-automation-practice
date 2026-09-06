@@ -31,7 +31,6 @@ public class RegistrationFlowTest {
     @BeforeClass
     public void setUp() {
         playwright = Playwright.create();
-        headless=true;
         boolean isCI = System.getenv("BUILD_NUMBER") != null;
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(isCI));
         page = browser.newPage();
